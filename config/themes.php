@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'default' => 'default',
+    'default' => 'custom',
 
     'themes' => [
         'default' => [
@@ -10,11 +10,11 @@ return [
             'name' => 'Default'
         ],
 
-        // 'bliss' => [
-        //     'views_path' => 'resources/themes/bliss/views',
-        //     'assets_path' => 'public/themes/bliss/assets',
-        //     'name' => 'Bliss',
-        //     'parent' => 'default'
-        // ]
+         'custom' => [
+             'views_path' => 'resources/themes/custom/views',
+             'assets_path' => 'public/themes/custom/assets',
+             'name' => 'Custom',
+//             'parent' => 'default'
+         ]
     ]
 ];
