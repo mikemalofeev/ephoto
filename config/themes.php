@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'default' => 'custom',
+    'default' => 'default',
 
     'themes' => [
         'default' => [
@@ -10,10 +10,10 @@ return [
             'name' => 'Default'
         ],
 
-         'custom' => [
-             'views_path' => 'resources/themes/custom/views',
-             'assets_path' => 'public/themes/custom/assets',
-             'name' => 'Custom',
+//         'custom' => [
+//             'views_path' => 'resources/themes/custom/views',
+//             'assets_path' => 'public/themes/custom/assets',
+//             'name' => 'Custom',
 //             'parent' => 'default'
          ]
     ]
