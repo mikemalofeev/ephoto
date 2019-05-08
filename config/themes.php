@@ -15,6 +15,6 @@ return [
 //             'assets_path' => 'public/themes/custom/assets',
 //             'name' => 'Custom',
 //             'parent' => 'default'
-         ]
+//         ]
     ]
 ];
