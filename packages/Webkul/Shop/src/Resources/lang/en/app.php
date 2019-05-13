@@ -2,44 +2,44 @@
 
 return [
     'layouts' => [
-        'my-account' => 'My Account',
-        'profile' => 'Profile',
-        'address' => 'Address',
-        'reviews' => 'Reviews',
-        'wishlist' => 'Wishlist',
-        'orders' => 'Orders',
+        'my-account' => 'Мой аккаунт',
+        'profile' => 'Профиль',
+        'address' => 'Адрес',
+        'reviews' => 'Обзоры',
+        'wishlist' => 'Список желаний',
+        'orders' => 'Заказы',
     ],
 
     'common' => [
-        'error' => 'Something went wrong, please try again later.'
+        'error' => 'Что-то пошло не так, пожалуйста попробуйте позже.'
     ],
 
     'home' => [
-        'page-title' => 'Bagisto - Home',
-        'featured-products' => 'Featured Products',
-        'new-products' => 'New Products',
+        'page-title' => 'ФОТОСЕВ92',
+        'featured-products' => 'Популярные товары',
+        'new-products' => 'Новые товары',
         'verify-email' => 'Verify Your Email Account',
         'resend-verify-email' => 'Resend Verification Email'
     ],
 
     'header' => [
-        'title' => 'Account',
-        'dropdown-text' => 'Manage Cart, Orders & Wishlist',
-        'sign-in' => 'Sign In',
-        'sign-up' => 'Sign Up',
-        'account' => 'Account',
-        'cart' => 'Cart',
-        'profile' => 'Profile',
-        'wishlist' => 'Wishlist',
-        'cart' => 'Cart',
-        'logout' => 'Logout',
-        'search-text' => 'Search products here'
+        'title' => 'Аккаунт',
+        'dropdown-text' => 'Управление корзиной и заказами',
+        'sign-in' => 'Войти',
+        'sign-up' => 'Зарегистироваться',
+        'account' => 'Аккаунт',
+        'cart' => 'Корзина',
+        'profile' => 'Профиль',
+        'wishlist' => 'Список желаний',
+        'cart' => 'Корзина',
+        'logout' => 'Выход',
+        'search-text' => 'Поиск товаров'
     ],
 
     'minicart' => [
-        'view-cart' => 'View Shopping Cart',
-        'checkout' => 'Checkout',
-        'cart' => 'Cart',
+        'view-cart' => 'Просмотреть корзину',
+        'checkout' => 'Заказать',
+        'cart' => 'Корзина',
         'zero' => '0'
     ],
 
