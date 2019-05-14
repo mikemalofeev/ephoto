@@ -831,8 +831,17 @@
         "symbol": "RUB",
         "name": "Russian Ruble",
         "symbol_native": "руб.",
-        "decimal_digits": 2,
-        "rounding": 0,
+        "decimal_digits": 0,
+        "rounding": 1,
+        "code": "RUB",
+        "name_plural": "Russian rubles"
+    },
+    "RUR": {
+        "symbol": "RUB",
+        "name": "Russian Ruble",
+        "symbol_native": "руб.",
+        "decimal_digits": 0,
+        "rounding": 1,
         "code": "RUB",
         "name_plural": "Russian rubles"
     },
@@ -1060,14 +1069,5 @@
         "rounding": 0,
         "code": "ZMK",
         "name_plural": "Zambian kwachas"
-    },
-    "RUB": {
-        "symbol": "\u20BD",
-        "name": "Руб",
-        "symbol_native": "\u20BD",
-        "decimal_digits": 2,
-        "rounding": 0,
-        "code": "RUB",
-        "name_plural": "Руб"
     }
 }
