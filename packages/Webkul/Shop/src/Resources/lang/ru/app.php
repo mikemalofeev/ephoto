@@ -305,7 +305,7 @@ return [
         'show' => 'Показывать по',
         'pager-info' => 'Показано :showing из :total позиций',
         'description' => 'Описание',
-        'specification' => 'Specification',
+        'specification' => 'Характеристики',
         'total-reviews' => ':total Reviews',
         'total-rating' => ':total_rating Ratings & :total_reviews Reviews',
         'by' => 'By :name',
