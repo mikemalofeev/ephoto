@@ -396,7 +396,10 @@ class Core
 
         $currencyCode = $this->getCurrentCurrency()->code;
 
-        return currency($this->convertPrice($amount), $currencyCode);
+        return currency($this->convertPrice($amount), $currencyCode, [
+            'minimum_fraction_digits' => 0,
+            'maximum_fraction_digits' => 0,
+        ]);
     }
 
     /**
