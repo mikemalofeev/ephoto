@@ -31,7 +31,6 @@ return [
         'cart' => 'Корзина',
         'profile' => 'Профиль',
         'wishlist' => 'Список желаний',
-        'cart' => 'Корзина',
         'logout' => 'Выход',
         'search-text' => 'Поиск товаров'
     ],
@@ -250,7 +249,7 @@ return [
                     'item-invoice' => 'Invoiced (:qty_invoiced)',
                     'item-shipped' => 'shipped (:qty_shipped)',
                     'item-canceled' => 'Canceled (:qty_canceled)',
-                    'price' => 'Price',
+                    'price' => 'Цена',
                     'total' => 'Total',
                     'subtotal' => 'Subtotal',
                     'shipping-handling' => 'Shipping & Handling',
@@ -292,7 +291,7 @@ return [
     ],
 
     'products' => [
-        'layered-nav-title' => 'Shop By',
+        'layered-nav-title' => 'Сортировать по',
         'price-label' => 'As low as',
         'remove-filter-link-title' => 'Clear All',
         'sort-by' => 'Сортировать по',
@@ -320,7 +319,7 @@ return [
         'empty' => 'Нет доступных товаров в данной категории',
         'add-to-cart' => 'Добавить в корзину',
         'buy-now' => 'Купить сейчас',
-        'whoops' => 'Ой!',
+        'whoops' => 'Извините!',
         'quantity' => 'Количество',
         'in-stock' => 'В наличии',
         'out-of-stock' => 'Нет в наличии',
@@ -418,8 +417,8 @@ return [
             'payment-methods' => 'Select Payment Method',
             'payment-method' => 'Payment Method',
             'summary' => 'Order Summary',
-            'price' => 'Price',
-            'quantity' => 'Quantity',
+            'price' => 'Цена',
+            'quantity' => 'Количество',
             'billing-address' => 'Billing Address',
             'shipping-address' => 'Shipping Address',
             'contact' => 'Contact',
@@ -434,7 +433,7 @@ return [
             'grand-total' => 'Grand Total',
             'delivery-charges' => 'Delivery Charges',
             'tax' => 'Tax',
-            'price' => 'price'
+            'price' => 'Цена'
         ],
 
         'success' => [
@@ -489,7 +488,7 @@ return [
     ],
 
     'webkul' => [
-        'copy-right' => '© Copyright :year Webkul Software, All rights reserved',
+        'copy-right' => '© ФОТОСЕВ92 :year ',
     ],
 
     'response' => [

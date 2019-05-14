@@ -292,18 +292,18 @@ return [
     ],
 
     'products' => [
-        'layered-nav-title' => 'Shop By',
+        'layered-nav-title' => 'Сортировать по',
         'price-label' => 'As low as',
         'remove-filter-link-title' => 'Clear All',
         'sort-by' => 'Сортировать по',
-        'from-a-z' => 'От А-Я',
-        'from-z-a' => 'От Я-А',
-        'newest-first' => 'Newest First',
-        'oldest-first' => 'Oldest First',
-        'cheapest-first' => 'Cheapest First',
-        'expensive-first' => 'Expensive First',
-        'show' => 'Show',
-        'pager-info' => 'Showing :showing of :total Items',
+        'from-a-z' => 'От А до Я',
+        'from-z-a' => 'От Я до А',
+        'newest-first' => 'Вначале новые',
+        'oldest-first' => 'Вначале старые',
+        'cheapest-first' => 'Вначале дешевые',
+        'expensive-first' => 'Вначале дорогие',
+        'show' => 'Показывать',
+        'pager-info' => 'Показано :showing из :total позиций',
         'description' => 'Описание',
         'specification' => 'Specification',
         'total-reviews' => ':total Reviews',
@@ -320,7 +320,7 @@ return [
         'empty' => 'Нет доступных товаров в данной категории',
         'add-to-cart' => 'Добавить в корзину',
         'buy-now' => 'Купить сейчас',
-        'whoops' => 'Ой!',
+        'whoops' => 'Извините!',
         'quantity' => 'Количество',
         'in-stock' => 'В наличии',
         'out-of-stock' => 'Нет в наличии',
@@ -489,7 +489,7 @@ return [
     ],
 
     'webkul' => [
-        'copy-right' => '© Copyright :year Webkul Software, All rights reserved',
+        'copy-right' => '© ФОТОСЕВ92 :year ',
     ],
 
     'response' => [
