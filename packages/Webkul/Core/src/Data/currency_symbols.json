@@ -1060,5 +1060,14 @@
         "rounding": 0,
         "code": "ZMK",
         "name_plural": "Zambian kwachas"
+    },
+    "RUB": {
+        "symbol": "\u20BD",
+        "name": "Руб",
+        "symbol_native": "\u20BD",
+        "decimal_digits": 2,
+        "rounding": 0,
+        "code": "RUB",
+        "name_plural": "Руб"
     }
 }

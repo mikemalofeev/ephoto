@@ -18,7 +18,7 @@
 
             {!! DbView::make(core()->getCurrentChannel())->field('footer_content')->render() !!}
 
-            <div class="list-container">
+            {{--<div class="list-container">--}}
                 {{--<span class="list-heading">{{ __('shop::app.footer.subscribe-newsletter') }}</span>--}}
                 {{--<div class="form-container">--}}
                     {{--<form action="{{ route('shop.subscribe') }}">--}}
@@ -43,22 +43,23 @@
                     {{--</div>--}}
                 {{--</div>--}}
 
-                <div class="currency">
-                    <span class="list-heading">{{ __('shop::app.footer.currency') }}</span>
-                    <div class="form-container">
-                        <div class="control-group">
-                            <select class="control locale-switcher" onchange="window.location.href = this.value">
+                {{--<div class="currency">--}}
+                    {{--<span class="list-heading">{{ __('shop::app.footer.currency') }}</span>--}}
+                    {{--<div class="form-container">--}}
+                        {{--<div class="control-group">--}}
+                            {{--<select class="control locale-switcher" onchange="window.location.href = this.value">--}}
 
-                                @foreach (core()->getCurrentChannel()->currencies as $currency)
-                                    <option value="?currency={{ $currency->code }}" {{ $currency->code == core()->getCurrentCurrencyCode() ? 'selected' : '' }}>{{ $currency->code }}</option>
-                                @endforeach
+                                {{--@foreach (core()->getCurrentChannel()->currencies as $currency)--}}
+                                    {{--<option value="?currency={{ $currency->code }}" {{ $currency->code == core()->getCurrentCurrencyCode() ? 'selected' : '' }}>{{ $currency->code }}</option>--}}
+                                {{--@endforeach--}}
 
-                            </select>
-                        </div>
-                    </div>
-                </div>
+                            {{--</select>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
 
-            </div>
+            {{--</div>--}}
+
         </div>
     </div>
 </div>
