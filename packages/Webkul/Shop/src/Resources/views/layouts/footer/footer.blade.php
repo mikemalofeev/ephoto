@@ -4,7 +4,7 @@
 
             @if (count($categories))
                 <div class="list-container">
-                    <span class="list-heading">Categories</span>
+                    <span class="list-heading">Категории</span>
 
                     <ul class="list-group">
                         @foreach ($categories as $key => $category)

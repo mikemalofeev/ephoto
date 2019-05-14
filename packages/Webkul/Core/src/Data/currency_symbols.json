@@ -3,7 +3,7 @@
         "symbol": "$",
         "name": "US Dollar",
         "symbol_native": "$",
-        "decimal_digits": 2,
+        "decimal_digits": 0,
         "rounding": 0,
         "code": "USD",
         "name_plural": "US dollars"
@@ -832,7 +832,7 @@
         "name": "Russian Ruble",
         "symbol_native": "руб.",
         "decimal_digits": 0,
-        "rounding": 1,
+        "rounding": 0,
         "code": "RUB",
         "name_plural": "Russian rubles"
     },
@@ -841,7 +841,7 @@
         "name": "Russian Ruble",
         "symbol_native": "руб.",
         "decimal_digits": 0,
-        "rounding": 1,
+        "rounding": 0,
         "code": "RUB",
         "name_plural": "Russian rubles"
     },
