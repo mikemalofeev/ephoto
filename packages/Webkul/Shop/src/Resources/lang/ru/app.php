@@ -293,7 +293,7 @@ return [
 
     'products' => [
         'layered-nav-title' => 'Выбрать по',
-        'price-label' => 'As low as',
+        'price-label' => 'От',
         'remove-filter-link-title' => 'Очистить',
         'sort-by' => 'Сортировать по',
         'from-a-z' => 'От А до Я',
