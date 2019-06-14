@@ -729,9 +729,9 @@ return [
         'reviews' => [
             'title' => 'Reviews',
             'edit-title' => 'Edit Review',
-            'rating' => 'Rating',
+            'rating' => 'Рейтинг',
             'status' => 'Status',
-            'comment' => 'Comment',
+            'comment' => 'Отзыв',
             'pending' => 'Pending',
             'approved' => 'Approve',
             'disapproved' => 'Disapprove'

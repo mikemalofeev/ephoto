@@ -69,13 +69,13 @@ return [
     ],
 
     'reviews' => [
-        'title' => 'Title',
+        'title' => 'Заголовок',
         'add-review-page-title' => 'Add Review',
-        'write-review' => 'Write a review',
+        'write-review' => 'Написать отзыв',
         'review-title' => 'Give Your Review a Title',
         'product-review-page-title' => 'Product Review',
         'rating-reviews' => 'Rating & Reviews',
-        'submit' => 'SUBMIT',
+        'submit' => 'Добавить',
         'delete-all' => 'All Reviews has deleted Succesfully',
         'ratingreviews' => ':rating Ratings & :review Reviews',
         'star' => 'Star',
@@ -157,27 +157,27 @@ return [
             'profile' => [
                 'index' => [
                     'page-title' => 'Customer - Profile',
-                    'title' => 'Profile',
-                    'edit' => 'Edit',
+                    'title' => 'Профиль',
+                    'edit' => 'Редактировать',
                 ],
 
                 'edit-success' => 'Profile Updated Successfully',
                 'edit-fail' => 'Error! Profile Cannot Be Updated, Please Try Again Later',
                 'unmatch' => 'The Old Password Does Not Match',
 
-                'fname' => 'First Name',
-                'lname' => 'Last Name',
-                'gender' => 'Gender',
-                'dob' => 'Date Of Birth',
-                'phone' => 'Phone',
+                'fname' => 'Имя',
+                'lname' => 'Фамилия',
+                'gender' => 'Пол',
+                'dob' => 'Дата рождения',
+                'phone' => 'Телефон',
                 'email' => 'Email',
-                'opassword' => 'Old Password',
-                'password' => 'Password',
-                'cpassword' => 'Confirm Password',
-                'submit' => 'Update Profile',
+                'opassword' => 'Старый пароль',
+                'password' => 'Новый пароль',
+                'cpassword' => 'Повторите новый пароль',
+                'submit' => 'Обновить профиль',
 
                 'edit-profile' => [
-                    'title' => 'Edit Profile',
+                    'title' => 'Редактировать профиль',
                     'page-title' => 'Customer - Edit Profile Form'
                 ]
             ],
@@ -185,87 +185,91 @@ return [
             'address' => [
                 'index' => [
                     'page-title' => 'Customer - Address',
-                    'title' => 'Address',
-                    'add' => 'Add Address',
-                    'edit' => 'Edit',
+                    'title' => 'Адрес',
+                    'add' => 'Добавить адрес',
+                    'edit' => 'Редактировать',
                     'empty' => 'You do not have any saved addresses here, please try to create it by clicking the link below',
                     'create' => 'Create Address',
-                    'delete' => 'Delete',
+                    'delete' => 'Удалить',
                     'make-default' => 'Make Default',
                     'default' => 'Default',
-                    'contact' => 'Contact',
+                    'contact' => 'Телефон',
                     'confirm-delete' =>  'Do you really want to delete this address?',
                     'default-delete' => 'Default Address Cannot Be Changed'
                 ],
 
                 'create' => [
                     'page-title' => 'Customer - Add Address Form',
-                    'title' => 'Add Address',
-                    'street-address' => 'Street Address',
-                    'country' => 'Country',
-                    'state' => 'State',
+                    'title' => 'Добавить адрес',
+                    'street-address' => 'Улица',
+                    'country' => 'Страна',
+                    'state' => 'Регион',
                     'select-state' => 'Select a region, state or province',
-                    'city' => 'City',
-                    'postcode' => 'Postal Code',
-                    'phone' => 'Phone',
-                    'submit' => 'Save Address',
-                    'success' => 'Address have been successfully added.',
-                    'error' => 'Address cannot be added.'
+                    'city' => 'Город',
+                    'postcode' => 'Индекс',
+                    'phone' => 'Телефон',
+                    'submit' => 'Сохранить адрес',
+                    'success' => 'Адрес добавлен.',
+                    'error' => 'Адрес не мложет быть добавлен.'
                 ],
 
                 'edit' => [
                     'page-title' => 'Customer - Edit Address',
-                    'title' => 'Edit Address',
-                    'submit' => 'Save Address',
-                    'success' => 'Address Updated Successfully.'
+                    'title' => 'Редактировать адрес',
+                    'submit' => 'Сохранить адрес',
+                    'success' => 'Адрес обновлен.'
                 ],
                 'delete' => [
-                    'success' => 'Address Successfully Deleted',
-                    'failure' => 'Address Cannot Be Deleted'
+                    'success' => 'Адрес удален',
+                    'failure' => 'Адрес не может быть удален'
                 ]
             ],
 
             'order' => [
                 'index' => [
                     'page-title' => 'Customer - Orders',
-                    'title' => 'Orders',
-                    'order_id' => 'Order ID',
-                    'date' => 'Date',
-                    'status' => 'Status',
-                    'total' => 'Total'
+                    'title' => 'Заказы',
+                    'order_id' => '№ заказа',
+                    'date' => 'Дата',
+                    'status' => 'Статус',
+                    'total' => 'Сумма'
                 ],
 
                 'view' => [
-                    'page-tile' => 'Order #:order_id',
-                    'info' => 'Information',
-                    'placed-on' => 'Placed On',
-                    'products-ordered' => 'Products Ordered',
+                    'page-tile' => 'Заказ №:order_id',
+                    'info' => 'Информация',
+                    'placed-on' => 'Размещен',
+                    'products-ordered' => 'Позиция заказа',
                     'invoices' => 'Invoices',
                     'shipments' => 'Shipments',
                     'SKU' => 'SKU',
-                    'product-name' => 'Name',
-                    'qty' => 'Qty',
-                    'item-status' => 'Item Status',
-                    'item-ordered' => 'Ordered (:qty_ordered)',
-                    'item-invoice' => 'Invoiced (:qty_invoiced)',
-                    'item-shipped' => 'shipped (:qty_shipped)',
-                    'item-canceled' => 'Canceled (:qty_canceled)',
-                    'price' => 'Price',
-                    'total' => 'Total',
-                    'subtotal' => 'Subtotal',
-                    'shipping-handling' => 'Shipping & Handling',
-                    'tax' => 'Tax',
-                    'tax-percent' => 'Tax Percent',
-                    'tax-amount' => 'Tax Amount',
-                    'discount-amount' => 'Discount Amount',
-                    'grand-total' => 'Grand Total',
-                    'total-paid' => 'Total Paid',
-                    'total-refunded' => 'Total Refunded',
-                    'total-due' => 'Total Due',
+                    'product-name' => 'Название',
+                    'qty' => 'Кол-во',
+                    'item-status' => 'Статус',
+//                    'item-ordered' => 'В обработке (:qty_ordered)',
+//                    'item-invoice' => 'Invoiced (:qty_invoiced)',
+//                    'item-shipped' => 'Доставка (:qty_shipped)',
+//                    'item-canceled' => 'Отменен (:qty_canceled)',
+                    'item-ordered' => 'В обработке',
+                    'item-invoice' => 'Ожидает оплаты',
+                    'item-shipped' => 'Доставка',
+                    'item-canceled' => 'Отменен',
+                    'price' => 'Цена',
+                    'total' => 'Сумма',
+                    'subtotal' => 'Сумма',
+                    'shipping-handling' => 'Доставка',
+                    'tax' => 'Таксы',
+                    'tax-percent' => 'Процент такс',
+                    'tax-amount' => 'Сумма такс',
+                    'discount-amount' => 'Сумма скидки',
+                    'grand-total' => 'Сумма заказа',
+                    'total-paid' => 'Всего оплачено',
+                    'total-refunded' => 'Всего возвращено',
+                    'total-due' => 'Итого',
                     'shipping-address' => 'Адрес доставки',
                     'billing-address' => 'Ваш адрес',
-                    'shipping-method' => 'Shipping Method',
-                    'payment-method' => 'Payment Method',
+                    'shipping-method' => 'Способ доставки',
+                    'payment-method' => 'Способ оплаты',
                     'individual-invoice' => 'Invoice #:invoice_id',
                     'individual-shipment' => 'Shipment #:shipment_id',
                     'print' => 'Print',
@@ -274,7 +278,7 @@ return [
                     'order-date' => 'Order Date',
                     'bill-to' => 'Bill to',
                     'ship-to' => 'Ship to',
-                    'contact' => 'Contact'
+                    'contact' => 'Телефон'
                 ]
             ],
 
@@ -376,7 +380,7 @@ return [
             'add-config-warning' => 'Please Select Option Before Adding To Cart',
             'quantity' => [
                 'quantity' => 'Quantity',
-                'success' => 'Cart Item(s) Successfully Updated',
+                'success' => 'Ваш заказ добавлен',
                 'illegal' => 'Quantity Cannot Be Lesser Than One',
                 'inventory_warning' => 'The Requested Quantity Is Not Available, Please Try Again Later',
                 'error' => 'Cannot Update The Item(s) At The Moment, Please Try Again Later'
@@ -394,7 +398,7 @@ return [
 
         'onepage' => [
             'title' => 'Checkout',
-            'information' => 'Информация',
+            'information' => 'Адрес',
             'shipping' => 'Доставка',
             'payment' => 'Оплата',
             'complete' => 'Завершение',
@@ -405,36 +409,36 @@ return [
             'email' => 'Email',
             'address1' => 'Улица',
             'city' => 'Город',
-            'state' => 'Область',
+            'state' => 'Регион',
             'select-state' => 'Select a region, state or province',
             'postcode' => 'Индекс',
             'phone' => 'Телефон',
             'country' => 'Страна',
-            'order-summary' => 'Order Summary',
-            'shipping-address' => 'Shipping Address',
+            'order-summary' => 'Итого по заказу',
+            'shipping-address' => 'Адрес доставки',
             'use_for_shipping' => 'Доставить по этому адресу',
             'continue' => 'Продолжить',
             'shipping-method' => 'Выберите тип доставки',
             'payment-methods' => 'Выберите тип оплаты',
             'payment-method' => 'Payment Method',
-            'summary' => 'Order Summary',
-            'price' => 'Price',
-            'quantity' => 'Quantity',
+            'summary' => 'Итого по заказу',
+            'price' => 'Цена',
+            'quantity' => 'Количество',
             'billing-address' => 'Ваш адрес',
             'shipping-address' => 'Адрес доставки',
-            'contact' => 'Contact',
+            'contact' => 'Телефон',
             'place-order' => 'Заказать',
-            'new-address' => 'Add New Address',
-            'save_as_address' => 'Save as Address'
+            'new-address' => 'Добавить адрес',
+            'save_as_address' => 'Сохранить адрес'
         ],
 
         'total' => [
-            'order-summary' => 'Order Summary',
-            'sub-total' => 'Items',
-            'grand-total' => 'Grand Total',
-            'delivery-charges' => 'Delivery Charges',
-            'tax' => 'Tax',
-            'price' => 'price'
+            'order-summary' => 'Итого по заказу',
+            'sub-total' => 'шт',
+            'grand-total' => 'Итого',
+            'delivery-charges' => 'Доставка',
+            'tax' => 'Таксы',
+            'price' => ''
         ],
 
         'success' => [
@@ -454,15 +458,15 @@ return [
             'summary' => 'Summary of Order',
             'shipping-address' => 'Адрес доставки',
             'billing-address' => 'Ваш адрес',
-            'contact' => 'Contact',
-            'shipping' => 'Shipping',
-            'payment' => 'Payment',
-            'price' => 'Price',
-            'quantity' => 'Quantity',
+            'contact' => 'Телефон',
+            'shipping' => 'Доставка',
+            'payment' => 'Оплата',
+            'price' => 'Цена',
+            'quantity' => 'Количество',
             'subtotal' => 'Subtotal',
-            'shipping-handling' => 'Shipping & Handling',
+            'shipping-handling' => 'Доставка',
             'tax' => 'Tax',
-            'grand-total' => 'Grand Total',
+            'grand-total' => 'Итого',
             'final-summary' => 'Thanks for showing your interest in our store we will send you tracking number once it shipped',
             'help' => 'If you need any kind of help please contact us at :support_email',
             'thanks' => 'Thanks!'
@@ -493,9 +497,9 @@ return [
     ],
 
     'response' => [
-        'create-success' => ':name created successfully.',
-        'update-success' => ':name updated successfully.',
-        'delete-success' => ':name deleted successfully.',
-        'submit-success' => ':name submitted successfully.'
+        'create-success' => ':name создан.',
+        'update-success' => ':name обновлен.',
+        'delete-success' => ':name удален.',
+        'submit-success' => ':name добавлен.'
     ],
 ];

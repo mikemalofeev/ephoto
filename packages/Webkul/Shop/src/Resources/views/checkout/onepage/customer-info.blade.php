@@ -33,9 +33,9 @@
                             @{{ addresses.state }},
                         </li>
 
-                        <li class="mb-15">
-                            @{{ addresses.country }}.
-                        </li>
+                        {{--<li class="mb-15">--}}
+                            {{--@{{ addresses.country }}.--}}
+                        {{--</li>--}}
 
                         <li>
                             <b>{{ __('shop::app.customer.account.address.index.contact') }}</b> : @{{ addresses.phone }}
@@ -173,13 +173,13 @@
             </span>
         </div>
 
-        <div class="control-group" :class="[errors.has('address-form.billing[country]') ? 'has-error' : '']">
+        <div class="control-group" :class="[errors.has('address-form.billing[country]') ? 'has-error' : '']" style="display:none;">
             <label for="billing[country]" class="required">
                 {{ __('shop::app.checkout.onepage.country') }}
             </label>
 
             <select type="text" v-validate="'required'" class="control" id="billing[country]" name="billing[country]" v-model="address.billing.country" data-vv-as="&quot;{{ __('shop::app.checkout.onepage.country') }}&quot;">
-                <option value=""></option>
+                <option value="RU"></option>
 
                 @foreach (core()->countries() as $country)
 
