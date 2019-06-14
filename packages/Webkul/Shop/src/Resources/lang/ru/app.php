@@ -262,8 +262,8 @@ return [
                     'total-paid' => 'Total Paid',
                     'total-refunded' => 'Total Refunded',
                     'total-due' => 'Total Due',
-                    'shipping-address' => 'Shipping Address',
-                    'billing-address' => 'Billing Address',
+                    'shipping-address' => 'Адрес доставки',
+                    'billing-address' => 'Ваш адрес',
                     'shipping-method' => 'Shipping Method',
                     'payment-method' => 'Payment Method',
                     'individual-invoice' => 'Invoice #:invoice_id',
@@ -319,7 +319,7 @@ return [
         'new' => 'Новинка',
         'empty' => 'Нет доступных товаров в данной категории',
         'add-to-cart' => 'Добавить в корзину',
-        'buy-now' => 'Купить сейчас',
+        'buy-now' => 'Купить',
         'whoops' => 'Извините!',
         'quantity' => 'Количество',
         'in-stock' => 'В наличии',
@@ -366,7 +366,7 @@ return [
             'title' => 'Shopping Cart',
             'empty' => 'Your Shopping Cart Is Empty',
             'update-cart' => 'Update Cart',
-            'continue-shopping' => 'Continue Shopping',
+            'continue-shopping' => 'Продолжить покупки',
             'proceed-to-checkout' => 'Proceed To Checkout',
             'remove' => 'Remove',
             'remove-link' => 'Remove',
@@ -420,10 +420,10 @@ return [
             'summary' => 'Order Summary',
             'price' => 'Price',
             'quantity' => 'Quantity',
-            'billing-address' => 'Billing Address',
+            'billing-address' => 'Ваш адрес',
             'shipping-address' => 'Адрес доставки',
             'contact' => 'Contact',
-            'place-order' => 'Place Order',
+            'place-order' => 'Заказать',
             'new-address' => 'Add New Address',
             'save_as_address' => 'Save as Address'
         ],
@@ -439,9 +439,9 @@ return [
 
         'success' => [
             'title' => 'Order successfully placed',
-            'thanks' => 'Thank you for your order!',
-            'order-id-info' => 'Your order id is #:order_id',
-            'info' => 'We will email you, your order details and tracking information'
+            'thanks' => 'Спасибо за ваш заказ!',
+            'order-id-info' => 'Ваш номер заказа - №:order_id',
+            'info' => 'Все данные о заказе будут отправлены вам на email'
         ]
     ],
 
@@ -452,8 +452,8 @@ return [
             'dear' => 'Dear :customer_name',
             'greeting' => 'Thanks for your Order :order_id placed on :created_at',
             'summary' => 'Summary of Order',
-            'shipping-address' => 'Shipping Address',
-            'billing-address' => 'Billing Address',
+            'shipping-address' => 'Адрес доставки',
+            'billing-address' => 'Ваш адрес',
             'contact' => 'Contact',
             'shipping' => 'Shipping',
             'payment' => 'Payment',
