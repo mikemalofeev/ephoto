@@ -25,34 +25,34 @@
 
                     <div class="line mb-25"></div>
 
-                    <li class="active" :class="[completedStep >= 0 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(1)">
+                    <li :class="[currentStep == 2 || completedStep >= 1 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(1)">
                         <div class="decorator address-info"></div>
                         <span>{{ __('shop::app.checkout.onepage.information') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 2 || completedStep > 1 ? 'active' : '', completedStep > 1 ? 'completed' : '']" @click="navigateToStep(2)">
+                    <li :class="[currentStep == 3 || completedStep > 2 ? 'active' : '', completedStep > 1 ? 'completed' : '']" @click="navigateToStep(2)">
                         <div class="decorator shipping"></div>
                         <span>{{ __('shop::app.checkout.onepage.shipping') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 3 || completedStep > 2 ? 'active' : '', completedStep > 2 ? 'completed' : '']" @click="navigateToStep(3)">
+                    <li :class="[currentStep == 4 || completedStep > 3 ? 'active' : '', completedStep > 2 ? 'completed' : '']" @click="navigateToStep(3)">
                         <div class="decorator payment"></div>
                         <span>{{ __('shop::app.checkout.onepage.payment') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 4 ? 'active' : '']">
+                    <li :class="[currentStep == 5 ? 'active' : '']">
                         <div class="decorator review"></div>
                         <span>{{ __('shop::app.checkout.onepage.complete') }}</span>
                     </li>
                 </ul>
 
-                <div class="step-content information" v-show="currentStep == 0" id="foto-section">
+                <div class="step-content information" v-show="currentStep == 1" id="foto-section">
 
                     @include('shop::checkout.onepage.foto')
 
@@ -66,7 +66,7 @@
 
                 </div>
 
-                <div class="step-content information" v-show="currentStep == 1" id="address-section">
+                <div class="step-content information" v-show="currentStep == 2" id="address-section">
 
                     @include('shop::checkout.onepage.customer-info')
 
@@ -80,7 +80,7 @@
 
                 </div>
 
-                <div class="step-content shipping" v-show="currentStep == 2" id="shipping-section">
+                <div class="step-content shipping" v-show="currentStep == 3" id="shipping-section">
 
                     <shipping-section v-if="currentStep == 2" @onShippingMethodSelected="shippingMethodSelected($event)"></shipping-section>
 
@@ -94,7 +94,7 @@
 
                 </div>
 
-                <div class="step-content payment" v-show="currentStep == 3" id="payment-section">
+                <div class="step-content payment" v-show="currentStep == 4" id="payment-section">
 
                     <payment-section v-if="currentStep == 3" @onPaymentMethodSelected="paymentMethodSelected($event)"></payment-section>
 
@@ -108,7 +108,7 @@
 
                 </div>
 
-                <div class="step-content review" v-show="currentStep == 4" id="summary-section">
+                <div class="step-content review" v-show="currentStep == 5" id="summary-section">
 
                     <review-section v-if="currentStep == 4"></review-section>
 
@@ -124,7 +124,7 @@
 
             </div>
 
-            <div class="col-right" v-show="currentStep != 4">
+            <div class="col-right" v-show="currentStep != 5">
 
                 <summary-section></summary-section>
 
