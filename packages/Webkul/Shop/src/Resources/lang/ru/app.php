@@ -380,7 +380,7 @@ return [
             'add-config-warning' => 'Please Select Option Before Adding To Cart',
             'quantity' => [
                 'quantity' => 'Quantity',
-                'success' => 'Ваш заказ добавлен',
+                'success' => 'Оформление заказа',
                 'illegal' => 'Quantity Cannot Be Lesser Than One',
                 'inventory_warning' => 'The Requested Quantity Is Not Available, Please Try Again Later',
                 'error' => 'Cannot Update The Item(s) At The Moment, Please Try Again Later'

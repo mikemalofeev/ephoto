@@ -18,6 +18,13 @@
             <div class="col-main">
 
                 <ul class="checkout-steps">
+                    <li class="active" :class="[completedStep >= 0 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(0)">
+                        <div class="decorator address-info"></div>
+                        <span>Фото</span>
+                    </li>
+
+                    <div class="line mb-25"></div>
+
                     <li class="active" :class="[completedStep >= 0 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(1)">
                         <div class="decorator address-info"></div>
                         <span>{{ __('shop::app.checkout.onepage.information') }}</span>
@@ -44,6 +51,20 @@
                         <span>{{ __('shop::app.checkout.onepage.complete') }}</span>
                     </li>
                 </ul>
+
+                <div class="step-content information" v-show="currentStep == 0" id="foto-section">
+
+                    @include('shop::checkout.onepage.foto')
+
+                    <div class="button-group">
+
+                        <button type="button" class="btn btn-lg btn-primary" @click="validateForm('foto-form')" :disabled="disable_button" id="checkout-foto-continue-button">
+                            {{ __('shop::app.checkout.onepage.continue') }}
+                        </button>
+
+                    </div>
+
+                </div>
 
                 <div class="step-content information" v-show="currentStep == 1" id="address-section">
 
