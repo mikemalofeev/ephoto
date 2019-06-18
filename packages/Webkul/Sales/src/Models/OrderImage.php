@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Webkul\Sales\Contracts\OrderImage as OrderImageContract;
 
-class OrderImage extends Model implements OrderImageContract
+class OrderImage extends Model //implements OrderImageContract
 {
     public $timestamps = false;
 

@@ -20,7 +20,7 @@ class OrderImageRepository extends Repository
      */
     function model()
     {
-        return 'Webkul\Sales\Contracts\OrderImage';
+        return 'Webkul\Sales\Models\OrderImage';
     }
 
     /**
