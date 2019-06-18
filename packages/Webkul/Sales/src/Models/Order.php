@@ -189,4 +189,22 @@ class Order extends Model implements OrderContract
 
         return false;
     }
+
+    /**
+     * The images that belong to the product.
+     */
+    public function images()
+    {
+        return $this->hasMany(OrderImageProxy::modelClass(), 'order_id');
+    }
+
+    /**
+     * The images that belong to the product.
+     */
+    public function getBaseImageUrlAttribute()
+    {
+        $image = $this->images()->first();
+
+        return $image ? $image->url : null;
+    }
 }
