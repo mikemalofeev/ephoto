@@ -142,14 +142,14 @@
 
         @else
 
-            <div class="title">
-                {{ __('shop::app.checkout.cart.title') }}
-            </div>
+            {{--<div class="title">--}}
+                {{--{{ __('shop::app.checkout.cart.title') }}--}}
+            {{--</div>--}}
 
             <div class="cart-content">
-                <p>
-                    {{ __('shop::app.checkout.cart.empty') }}
-                </p>
+                {{--<p>--}}
+                    {{--{{ __('shop::app.checkout.cart.empty') }}--}}
+                {{--</p>--}}
 
                 <p style="display: inline-block;">
                     <a style="display: inline-block;" href="{{ route('shop.home.index') }}" class="btn btn-lg btn-primary">{{ __('shop::app.checkout.cart.continue-shopping') }}</a>
