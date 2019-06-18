@@ -25,18 +25,24 @@ class OrderRepository extends Repository
      */
     protected $orderItem;
 
+    protected $orderImage;
+
     /**
      * Create a new repository instance.
      *
-     * @param  Webkul\Sales\Repositories\OrderItemRepository $orderItem
-     * @return void
+     * @param \Webkul\Sales\Repositories\OrderItemRepository $orderItem
+     * @param OrderImageRepository $orderImage
+     * @param App $app
      */
     public function __construct(
         OrderItemRepository $orderItem,
+        OrderImageRepository $orderImage,
         App $app
     )
     {
         $this->orderItem = $orderItem;
+
+        $this->orderImage = $orderImage;
 
         parent::__construct($app);
     }
@@ -97,6 +103,8 @@ class OrderRepository extends Repository
 
                 $this->orderItem->manageInventory($orderItem);
             }
+
+            $this->orderImage->uploadImages($data, $order);
 
             Event::fire('checkout.order.save.after', $order);
         } catch (\Exception $e) {
