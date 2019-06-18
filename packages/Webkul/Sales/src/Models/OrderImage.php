@@ -10,7 +10,7 @@ class OrderImage extends Model implements OrderImageContract
 {
     public $timestamps = false;
 
-    protected $fillable = ['path', 'product_id'];
+    protected $fillable = ['path', 'order_id'];
 
     /**
      * Get the product that owns the image.
@@ -34,16 +34,6 @@ class OrderImage extends Model implements OrderImageContract
     public function getUrlAttribute()
     {
         return $this->url();
-    }
-
-    /**
-     * @param string $key
-     *
-     * @return bool
-     */
-    public function isCustomAttribute($attribute)
-    {
-        return $this->attribute_family->custom_attributes->pluck('code')->contains($attribute);
     }
 
     /**

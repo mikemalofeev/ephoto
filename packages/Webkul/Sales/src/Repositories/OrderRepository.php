@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Eloquent\Model;
 use Webkul\Core\Eloquent\Repository;
 use Webkul\Sales\Repositories\OrderItemRepository;
+use Webkul\Sales\Repositories\OrderImageRepository;
 
 /**
  * Order Reposotory
@@ -31,7 +32,7 @@ class OrderRepository extends Repository
      * Create a new repository instance.
      *
      * @param \Webkul\Sales\Repositories\OrderItemRepository $orderItem
-     * @param OrderImageRepository $orderImage
+     * @param \Webkul\Sales\Repositories\OrderImageRepository $orderImage
      * @param App $app
      */
     public function __construct(
