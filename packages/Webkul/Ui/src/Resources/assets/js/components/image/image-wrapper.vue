@@ -11,7 +11,7 @@
             ></image-item>
         </div>
 
-        <label class="btn btn-lg btn-primary" style="display: inline-block; width: auto" @click="createFileType">{{ buttonLabel }}</label>
+        <label class="btn btn-lg btn-primary" style="display: inline-block; width: auto; margin-top: 40px;" @click="createFileType">{{ buttonLabel }}</label>
     </div>
 </template>
 
@@ -21,13 +21,13 @@
             buttonLabel: {
                 type: String,
                 required: false,
-                default: 'Add Image'
+                default: 'Добавить фото'
             },
 
             removeButtonLabel: {
                 type: String,
                 required: false,
-                default: 'Remove Image'
+                default: 'Удалить фото'
             },
 
             inputName: {
@@ -89,7 +89,7 @@
                         this_this.removeImage(image)
                     });
                 }
-
+console.log(1)
                 this.imageCount++;
 
                 this.items.push({'id': 'image_' + this.imageCount});

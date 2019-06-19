@@ -368,7 +368,7 @@ return [
             'disabled' => 'Disabled',
             'add-variant-title' => 'Add Variant',
             'variant-already-exist-message' => 'Variant with same attribute options already exists.',
-            'add-image-btn-title' => 'Add Image',
+            'add-image-btn-title' => 'Добавить фото',
             'mass-delete-success' => 'All the selected index of products have been deleted successfully',
             'mass-update-success' => 'All the selected index of products have been updated successfully',
             'configurable-error' => 'Please select atleast one configurable attribute.',
