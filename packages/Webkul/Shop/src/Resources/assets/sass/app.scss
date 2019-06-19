@@ -2433,6 +2433,11 @@ section.cart {
                     background-repeat: no-repeat;
                     background-position: center;
 
+                    &.foto-info {
+                        background-image: url('../images/foto.svg');
+                        background-size: 20px;
+                    }
+
                     &.address-info {
                         background-image: url('../images/address.svg');
                     }

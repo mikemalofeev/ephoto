@@ -18,28 +18,28 @@
             <div class="col-main">
 
                 <ul class="checkout-steps">
-                    <li class="active" :class="[completedStep >= 0 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(0)">
-                        <div class="decorator address-info"></div>
+                    <li class="active" :class="[completedStep >= 0 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(1)">
+                        <div class="decorator foto-info"></div>
                         <span>Фото</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 2 || completedStep >= 1 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(1)">
+                    <li :class="[currentStep == 2 || completedStep >= 1 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(2)">
                         <div class="decorator address-info"></div>
                         <span>{{ __('shop::app.checkout.onepage.information') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 3 || completedStep > 2 ? 'active' : '', completedStep > 1 ? 'completed' : '']" @click="navigateToStep(2)">
+                    <li :class="[currentStep == 3 || completedStep > 2 ? 'active' : '', completedStep > 1 ? 'completed' : '']" @click="navigateToStep(3)">
                         <div class="decorator shipping"></div>
                         <span>{{ __('shop::app.checkout.onepage.shipping') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 4 || completedStep > 3 ? 'active' : '', completedStep > 2 ? 'completed' : '']" @click="navigateToStep(3)">
+                    <li :class="[currentStep == 4 || completedStep > 3 ? 'active' : '', completedStep > 2 ? 'completed' : '']" @click="navigateToStep(4)">
                         <div class="decorator payment"></div>
                         <span>{{ __('shop::app.checkout.onepage.payment') }}</span>
                     </li>
@@ -58,7 +58,7 @@
 
                     <div class="button-group">
 
-                        <button type="button" class="btn btn-lg btn-primary" @click="validateForm('foto-form')" :disabled="disable_button" id="checkout-foto-continue-button">
+                        <button type="button" class="btn btn-lg btn-primary" @click="saveFoto()" :disabled="disable_button" id="checkout-foto-continue-button">
                             {{ __('shop::app.checkout.onepage.continue') }}
                         </button>
 
@@ -231,6 +231,28 @@
                     });
                 },
 
+                saveFoto () {
+                    var this_this = this;
+
+                    this.disable_button = true;
+
+                    this.$http.post("{{ route('shop.checkout.save-foto') }}", this.address)
+                        .then(function(response) {
+                            this_this.disable_button = false;
+
+                            if (response.data.jump_to_section == 'shipping') {
+                                shippingHtml = Vue.compile(response.data.html)
+                                this_this.completedStep = 1;
+                                this_this.currentStep = 2;
+                            }
+                        })
+                        .catch(function (error) {
+                            this_this.disable_button = false;
+
+                            this_this.handleErrorResponse(error.response, 'address-form')
+                        })
+                },
+
                 saveAddress () {
                     var this_this = this;
 
@@ -242,8 +264,8 @@
 
                             if (response.data.jump_to_section == 'shipping') {
                                 shippingHtml = Vue.compile(response.data.html)
-                                this_this.completedStep = 1;
-                                this_this.currentStep = 2;
+                                this_this.completedStep = 2;
+                                this_this.currentStep = 3;
                             }
                         })
                         .catch(function (error) {
@@ -264,8 +286,8 @@
 
                             if (response.data.jump_to_section == 'payment') {
                                 paymentHtml = Vue.compile(response.data.html)
-                                this_this.completedStep = 2;
-                                this_this.currentStep = 3;
+                                this_this.completedStep = 3;
+                                this_this.currentStep = 4;
                             }
                         })
                         .catch(function (error) {
@@ -286,8 +308,8 @@
 
                             if (response.data.jump_to_section == 'review') {
                                 reviewHtml = Vue.compile(response.data.html)
-                                this_this.completedStep = 3;
-                                this_this.currentStep = 4;
+                                this_this.completedStep = 4;
+                                this_this.currentStep = 5;
                             }
                         })
                         .catch(function (error) {

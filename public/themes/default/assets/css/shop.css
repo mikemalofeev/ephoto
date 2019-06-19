@@ -2677,6 +2677,11 @@ section.cart .cart-content .right-side {
   background-position: center;
 }
 
+.checkout-process .col-main ul.checkout-steps li .decorator.foto-info {
+  background-image: url("../images/foto.svg");
+  background-size: 20px;
+}
+
 .checkout-process .col-main ul.checkout-steps li .decorator.address-info {
   background-image: url("../images/address.svg");
 }

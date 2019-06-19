@@ -61,6 +61,23 @@ class OnepageController extends Controller
     }
 
     /**
+     * Saves shipping method.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function saveFoto()
+    {
+        $images = request()->get('images');
+
+        if (Cart::hasError() || !$shippingMethod || !Cart::saveShippingMethod($shippingMethod))
+            return response()->json(['redirect_url' => route('shop.checkout.cart.index')], 403);
+
+        Cart::collectTotals();
+
+        return response()->json(Payment::getSupportedPaymentMethods());
+    }
+
+    /**
      * Saves customer address.
      *
      * @param  \Webkul\Checkout\Http\Requests\CustomerAddressForm $request
