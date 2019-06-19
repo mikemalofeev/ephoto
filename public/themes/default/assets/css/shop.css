@@ -2679,7 +2679,6 @@ section.cart .cart-content .right-side {
 
 .checkout-process .col-main ul.checkout-steps li .decorator.foto-info {
   background-image: url("../images/foto.svg");
-  background-size: 20px;
 }
 
 .checkout-process .col-main ul.checkout-steps li .decorator.address-info {

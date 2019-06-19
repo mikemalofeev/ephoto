@@ -25,21 +25,21 @@
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 2 || completedStep >= 1 ? 'active' : '', completedStep > 0 ? 'completed' : '']" @click="navigateToStep(2)">
+                    <li :class="[currentStep == 2 || completedStep >= 1 ? 'active' : '', completedStep > 1 ? 'completed' : '']" @click="navigateToStep(2)">
                         <div class="decorator address-info"></div>
                         <span>{{ __('shop::app.checkout.onepage.information') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 3 || completedStep > 2 ? 'active' : '', completedStep > 1 ? 'completed' : '']" @click="navigateToStep(3)">
+                    <li :class="[currentStep == 3 || completedStep > 2 ? 'active' : '', completedStep > 2 ? 'completed' : '']" @click="navigateToStep(3)">
                         <div class="decorator shipping"></div>
                         <span>{{ __('shop::app.checkout.onepage.shipping') }}</span>
                     </li>
 
                     <div class="line mb-25"></div>
 
-                    <li :class="[currentStep == 4 || completedStep > 3 ? 'active' : '', completedStep > 2 ? 'completed' : '']" @click="navigateToStep(4)">
+                    <li :class="[currentStep == 4 || completedStep > 3 ? 'active' : '', completedStep > 3 ? 'completed' : '']" @click="navigateToStep(4)">
                         <div class="decorator payment"></div>
                         <span>{{ __('shop::app.checkout.onepage.payment') }}</span>
                     </li>
@@ -240,11 +240,11 @@
                         .then(function(response) {
                             this_this.disable_button = false;
 
-                            if (response.data.jump_to_section == 'shipping') {
-                                shippingHtml = Vue.compile(response.data.html)
+                            // if (response.data.jump_to_section == 'shipping') {
+                            //     shippingHtml = Vue.compile(response.data.html)
                                 this_this.completedStep = 1;
                                 this_this.currentStep = 2;
-                            }
+                            // }
                         })
                         .catch(function (error) {
                             this_this.disable_button = false;
