@@ -190,7 +190,8 @@ class CartController extends Controller
     {
         Event::fire('checkout.cart.add.before', $id);
 
-        $result = Cart::proceedToBuyNow($id);
+        $data = request()->except('_token');
+        $result = Cart::proceedToBuyNow($data['selected_configurable_option'] ?? $id, $data['quantity'] ?? 1);
 
         Event::fire('checkout.cart.add.after', $result);
 

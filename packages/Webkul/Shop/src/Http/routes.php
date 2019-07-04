@@ -87,6 +87,7 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
 
     //Shop buynow button action
     Route::get('buynow/{id}', 'Webkul\Shop\Http\Controllers\CartController@buyNow')->name('shop.product.buynow');
+    Route::post('buynow/{id}', 'Webkul\Shop\Http\Controllers\CartController@buyNow')->name('shop.product.buynow');
 
     //Shop buynow button action
     Route::get('move/wishlist/{id}', 'Webkul\Shop\Http\Controllers\CartController@moveToWishlist')->name('shop.movetowishlist');

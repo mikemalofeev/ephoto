@@ -106,7 +106,7 @@
 @push('scripts')
 
     <script type="text/x-template" id="product-view-template">
-        <form method="POST" id="product-form" action="{{ route('cart.add', $product->id) }}" @click="onSubmit($event)">
+        <form method="POST" id="product-form" action="{{ route('shop.product.buynow', $product->id) }}" @click="onSubmit($event)">
 
             <slot></slot>
 
@@ -130,11 +130,13 @@
 
                     this.$validator.validateAll().then(result => {
                         if (result) {
-                            if (e.target.getAttribute('data-href')) {
-                                window.location.href = e.target.getAttribute('data-href');
-                            } else {
-                                document.getElementById('product-form').submit();
-                            }
+                            document.getElementById('product-form').submit();
+
+                            // if (e.target.getAttribute('data-href')) {
+                            //     window.location.href = e.target.getAttribute('data-href');
+                            // } else {
+                            //     document.getElementById('product-form').submit();
+                            // }
                         }
                     });
                 }

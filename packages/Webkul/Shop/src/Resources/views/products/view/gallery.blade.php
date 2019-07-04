@@ -43,8 +43,8 @@
                 {{-- Uncomment the line below for activating share links --}}
                 {{-- @include('shop::products.sharelinks') --}}
                 @auth('customer')
-                    <a class="add-to-wishlist" href="{{ route('customer.wishlist.add', $product->id) }}">
-                    </a>
+                    {{--<a class="add-to-wishlist" href="{{ route('customer.wishlist.add', $product->id) }}">--}}
+                    {{--</a>--}}
                 @endauth
             </div>
         </div>
