@@ -82,7 +82,7 @@
 
                 <div class="step-content shipping" v-show="currentStep == 3" id="shipping-section">
 
-                    <shipping-section v-if="currentStep == 2" @onShippingMethodSelected="shippingMethodSelected($event)"></shipping-section>
+                    <shipping-section v-if="currentStep == 3" @onShippingMethodSelected="shippingMethodSelected($event)"></shipping-section>
 
                     <div class="button-group">
 
@@ -96,7 +96,7 @@
 
                 <div class="step-content payment" v-show="currentStep == 4" id="payment-section">
 
-                    <payment-section v-if="currentStep == 3" @onPaymentMethodSelected="paymentMethodSelected($event)"></payment-section>
+                    <payment-section v-if="currentStep == 4" @onPaymentMethodSelected="paymentMethodSelected($event)"></payment-section>
 
                     <div class="button-group">
 
@@ -110,7 +110,7 @@
 
                 <div class="step-content review" v-show="currentStep == 5" id="summary-section">
 
-                    <review-section v-if="currentStep == 4"></review-section>
+                    <review-section v-if="currentStep == 5"></review-section>
 
                     <div class="button-group">
 
