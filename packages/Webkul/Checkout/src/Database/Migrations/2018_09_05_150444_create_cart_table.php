@@ -54,6 +54,7 @@ class CreateCartTable extends Migration
             $table->integer('channel_id')->unsigned();
             $table->foreign('channel_id')->references('id')->on('channels')->onDelete('cascade');
             $table->timestamps();
+            $table->string('images')->nullable();
         });
     }
 

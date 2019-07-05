@@ -5,6 +5,7 @@ namespace Webkul\Checkout\Models;
 use Illuminate\Database\Eloquent\Model;
 use Webkul\Product\Models\ProductProxy;
 use Webkul\Checkout\Contracts\Cart as CartContract;
+use Webkul\Sales\Models\OrderImageProxy;
 
 class Cart extends Model implements CartContract
 {

@@ -236,7 +236,19 @@
 
                     this.disable_button = true;
 
-                    this.$http.post("{{ route('shop.checkout.save-foto') }}", this.address)
+                    var filesToUpload = document.querySelectorAll('[type=file][name^=images]');
+                    var formData = new FormData();
+
+                    for(var i=1; i<=10; i++) {
+                        if (filesToUpload[i]) {
+                            formData.append('images[image_' + i + ']', filesToUpload[i-1].files[0]);
+                        } else {
+                            break;
+                        }
+                    }
+
+
+                    this.$http.post("{{ route('shop.checkout.save-foto') }}", formData)
                         .then(function(response) {
                             this_this.disable_button = false;
 

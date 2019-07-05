@@ -10,7 +10,7 @@ class OrderImage extends Model implements OrderImageContract
 {
     public $timestamps = false;
 
-    protected $fillable = ['path', 'order_id'];
+    protected $fillable = ['path', 'order_id', 'cart_id'];
 
     /**
      * Get the product that owns the image.

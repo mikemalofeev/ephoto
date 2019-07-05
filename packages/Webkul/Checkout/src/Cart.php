@@ -602,6 +602,8 @@ class Cart {
 
         $data['selected_shipping_rate'] = $cart->selected_shipping_rate->toArray();
 
+        $data['images'] = json_decode($cart->images);
+
         return $data;
     }
 
@@ -720,6 +722,23 @@ class Cart {
             $cart->customer_last_name = $cart->billing_address->last_name;
         }
 
+        $cart->save();
+
+        return true;
+    }
+
+    /**
+     * Save shipping method for cart
+     *
+     * @param string $shippingMethodCode
+     * @return Mixed
+     */
+    public function saveImages($images)
+    {
+        if (! $cart = $this->getCart())
+            return false;
+
+        $cart->images = json_encode($images);
         $cart->save();
 
         return true;
@@ -1043,6 +1062,8 @@ class Cart {
             'shipping_address' => array_except($data['shipping_address'], ['id', 'cart_id']),
             'billing_address' => array_except($data['billing_address'], ['id', 'cart_id']),
             'payment' => array_except($data['payment'], ['id', 'cart_id']),
+
+            'images' => $data['images'],
 
             'channel' => core()->getCurrentChannel(),
         ];
