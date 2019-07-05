@@ -602,7 +602,7 @@ class Cart {
 
         $data['selected_shipping_rate'] = $cart->selected_shipping_rate->toArray();
 
-        $data['images'] = json_decode($cart->images);
+        $data['images'] = json_decode($cart->images, true);
 
         return $data;
     }
