@@ -30,44 +30,15 @@ class OrderImageRepository extends Repository
      */
     public function uploadImages($data, $order)
     {
-        $previousImageIds = $order->images()->pluck('id');
-
         if (isset($data['images'])) {
-            foreach ($data['images'] as $imageId => $image) {
-                $file = 'images.' . $imageId;
-                $dir = 'order/' . $order->id;
+            foreach ($data['images'] as $image) {
 
-                if (str_contains($imageId, 'image_')) {
-                    if (request()->hasFile($file)) {
-                        $this->create([
-                                'path' => request()->file($file)->store($dir),
-                                'order_id' => $order->id
-                            ]);
-                    }
-                } else {
-                    if (is_numeric($index = $previousImageIds->search($imageId))) {
-                        $previousImageIds->forget($index);
-                    }
-
-                    if (request()->hasFile($file)) {
-                        if ($imageModel = $this->find($imageId)) {
-                            Storage::delete($imageModel->path);
-                        }
-
-                        $this->update([
-                                'path' => request()->file($file)->store($dir)
-                            ], $imageId);
-                    }
-                }
+                $this->create([
+                    'path' => $image['path'],
+                    'order_id' => $order->id
+                ]);
             }
         }
 
-        foreach ($previousImageIds as $imageId) {
-            if ($imageModel = $this->find($imageId)) {
-                Storage::delete($imageModel->path);
-
-                $this->delete($imageId);
-            }
-        }
     }
 }

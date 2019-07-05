@@ -67,7 +67,7 @@ class OnepageController extends Controller
      */
     public function saveFoto()
     {
-        $images = request()->get('images');
+        $images = request()->file('images');
 
         Cart::saveImages($images ?? []);
 

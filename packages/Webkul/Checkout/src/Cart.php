@@ -738,7 +738,18 @@ class Cart {
         if (! $cart = $this->getCart())
             return false;
 
-        $cart->images = json_encode($images);
+        $dataImages = [];
+        if ($images) {
+            foreach ($images as $image) {
+                $dir = 'cart/' . $cart->id;
+                $path = $image->store($dir);
+                $dataImages[] = [
+                    'path' => $path,
+                ];
+            }
+        }
+
+        $cart->images = json_encode($dataImages);
         $cart->save();
 
         return true;

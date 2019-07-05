@@ -240,16 +240,23 @@
                     var formData = new FormData();
 
                     for(var i=1; i<=10; i++) {
-                        if (filesToUpload[i]) {
+                        if (filesToUpload[i-1]) {
                             formData.append('images[image_' + i + ']', filesToUpload[i-1].files[0]);
                         } else {
                             break;
                         }
                     }
+console.log(formData);
 
-
-                    this.$http.post("{{ route('shop.checkout.save-foto') }}", formData)
-                        .then(function(response) {
+                    this.$http.post(
+                        "{{ route('shop.checkout.save-foto') }}",
+                        formData,
+                        {
+                            headers: {
+                                'Content-Type': 'multipart/form-data'
+                            }
+                        }
+                    ).then(function(response) {
                             this_this.disable_button = false;
 
                             // if (response.data.jump_to_section == 'shipping') {
