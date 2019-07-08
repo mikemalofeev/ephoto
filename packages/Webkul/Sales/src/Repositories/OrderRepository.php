@@ -87,6 +87,9 @@ class OrderRepository extends Repository
 
             $data['status'] = 'pending';
 
+            $images['images'] = $data['images'] ?? null;
+            unset($data['images']);
+
             $order = $this->model->create(array_merge($data, ['increment_id' => $this->generateIncrementId()]));
 
             $order->payment()->create($data['payment']);
@@ -105,7 +108,7 @@ class OrderRepository extends Repository
                 $this->orderItem->manageInventory($orderItem);
             }
 
-            $this->orderImage->uploadImages($data, $order);
+            $this->orderImage->uploadImages($images, $order);
 
             Event::fire('checkout.order.save.after', $order);
         } catch (\Exception $e) {

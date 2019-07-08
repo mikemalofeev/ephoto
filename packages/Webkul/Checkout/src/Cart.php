@@ -3,6 +3,7 @@
 namespace Webkul\Checkout;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 use Webkul\Checkout\Repositories\CartRepository;
 use Webkul\Checkout\Repositories\CartItemRepository;
 use Webkul\Checkout\Repositories\CartAddressRepository;
@@ -740,8 +741,9 @@ class Cart {
 
         $dataImages = [];
         if ($images) {
+            $dir = 'cart/' . $cart->id;
+            Storage::deleteDirectory($dir);
             foreach ($images as $image) {
-                $dir = 'cart/' . $cart->id;
                 $path = $image->store($dir);
                 $dataImages[] = [
                     'path' => $path,
