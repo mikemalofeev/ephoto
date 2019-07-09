@@ -17,12 +17,12 @@
         </div>
     @endif
 
-    @if ($cart->base_tax_total)
-        <div class="item-detail">
-            <label>{{ __('shop::app.checkout.total.tax') }}</label>
-            <label class="right">{{ core()->currency($cart->base_tax_total) }}</label>
-        </div>
-    @endif
+    {{--@if ($cart->base_tax_total)--}}
+        {{--<div class="item-detail">--}}
+            {{--<label>{{ __('shop::app.checkout.total.tax') }}</label>--}}
+            {{--<label class="right">{{ core()->currency($cart->base_tax_total) }}</label>--}}
+        {{--</div>--}}
+    {{--@endif--}}
 
     <div class="payble-amount">
         <label>{{ __('shop::app.checkout.total.grand-total') }}</label>

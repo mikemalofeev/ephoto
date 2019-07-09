@@ -145,12 +145,12 @@
                 </span>
             </div>
 
-            <div>
-                <span>{{ __('shop::app.mail.order.tax') }}</span>
-                <span style="float: right;">
-                    {{ core()->formatPrice($invoice->tax_amount, $invoice->order_currency_code) }}
-                </span>
-            </div>
+            {{--<div>--}}
+                {{--<span>{{ __('shop::app.mail.order.tax') }}</span>--}}
+                {{--<span style="float: right;">--}}
+                    {{--{{ core()->formatPrice($invoice->tax_amount, $invoice->order_currency_code) }}--}}
+                {{--</span>--}}
+            {{--</div>--}}
 
             <div style="font-weight: bold">
                 <span>{{ __('shop::app.mail.order.grand-total') }}</span>

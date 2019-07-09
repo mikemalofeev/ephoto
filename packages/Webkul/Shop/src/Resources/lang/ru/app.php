@@ -371,6 +371,7 @@ return [
             'empty' => 'Your Shopping Cart Is Empty',
             'update-cart' => 'Update Cart',
             'continue-shopping' => 'Продолжить покупки',
+            'continue-payment' => 'Перейти к оплате',
             'proceed-to-checkout' => 'Proceed To Checkout',
             'remove' => 'Remove',
             'remove-link' => 'Remove',
@@ -445,7 +446,7 @@ return [
             'title' => 'Order successfully placed',
             'thanks' => 'Спасибо за ваш заказ!',
             'order-id-info' => 'Ваш номер заказа - №:order_id',
-            'info' => 'Все данные о заказе будут отправлены вам на email'
+            'info' => 'После обработки заказа с Вами свяжется наш менеждер'
         ]
     ],
 

@@ -15,8 +15,8 @@
         <p>{{ __('shop::app.checkout.success.info') }}</p>
 
         <div class="misc-controls">
-            <a style="display: inline-block" href="{{ route('shop.home.index') }}" class="btn btn-lg btn-primary">
-                {{ __('shop::app.checkout.cart.continue-shopping') }}
+            <a style="display: inline-block" href="{{ route('shop.payment') }}" class="btn btn-lg btn-primary">
+                {{ __('shop::app.checkout.cart.continue-payment') }}
             </a>
         </div>
 
