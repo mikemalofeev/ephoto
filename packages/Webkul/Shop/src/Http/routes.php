@@ -7,6 +7,10 @@ Route::group(['middleware' => ['web', 'theme', 'locale', 'currency']], function 
         'view' => 'shop::home.index'
     ])->name('shop.home.index');
 
+    Route::get('/about', 'Webkul\Shop\Http\Controllers\StaticController@about')->name('shop.about');
+    Route::get('/payment', 'Webkul\Shop\Http\Controllers\StaticController@payment')->name('shop.payment');
+    Route::get('/shipment', 'Webkul\Shop\Http\Controllers\StaticController@shipment')->name('shop.shipment');
+
     //subscription
     //subscribe
     Route::get('/subscribe', 'Webkul\Shop\Http\Controllers\SubscriptionController@subscribe')->name('shop.subscribe');
