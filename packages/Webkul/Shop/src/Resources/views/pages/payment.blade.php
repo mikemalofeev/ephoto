@@ -4,8 +4,8 @@
         <div class="wrapper" style="display: flex; height: 100vh; width: 80vw;
     justify-content: space-between;">
             <div class="error-box">
-                <div class="error-title">Оплата</div>
-                <p></p>
+                <div class="error-title">ОПЛАТА</div>
+                <br />
                 <div class="error-description">
 
                     <p>Оплата Онлайн</p>
@@ -13,6 +13,9 @@
                     <p>Возможно предоплата 50% заказа</p>
 
                 </div>
+                <br />
+                <p>☎ тел. +7 978 006 89 56 ☎</p>
+                <p>email: mme441889@gmail.com</p>
                 <p><a href="https://vk.com/fotosalon92">Мы вконтакте</a></p>
             </div>
 

@@ -5,7 +5,7 @@
     justify-content: space-between;">
             <div class="error-box">
                 <div class="error-title">ДОСТАВКА</div>
-                <p></p>
+                <br />
                 <div class="error-description">
 
                     <ul>
@@ -16,6 +16,9 @@
                     </ul>
 
                 </div>
+                <br />
+                <p>☎ тел. +7 978 006 89 56 ☎</p>
+                <p>email: mme441889@gmail.com</p>
                 <p><a href="https://vk.com/fotosalon92">Мы вконтакте</a></p>
             </div>
 
